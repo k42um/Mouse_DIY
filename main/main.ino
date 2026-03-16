@@ -61,3 +61,5 @@ void loop(){
 
     Mouse.move(xMove / JOY_SENSITIVITY, yMove / JOY_SENSITIVITY, 0);
 }
+
+// 参考: https://speeddemon.jp/mouse-h/
