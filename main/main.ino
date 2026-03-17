@@ -7,7 +7,7 @@
 #define X_AXIS_PIN A0
 #define Y_AXIS_PIN A1
 
-#define JOY_SENSITIVITY 10
+#define JOY_SENSITIVITY 15
 #define JOY_CENTER_THRESHOLD 20
 
 void setup(){
@@ -53,7 +53,7 @@ void loop(){
     int x = analogRead(X_AXIS_PIN);
     int y = analogRead(Y_AXIS_PIN);
 
-    int8_t xMove = map(x, 0, 1023, -128, 127);
+    int8_t xMove = map(x, 0, 1023, 127, -128);
     int8_t yMove = map(y, 0, 1023, 127, -128);
 
     if(abs(xMove) < JOY_CENTER_THRESHOLD) xMove = 0;
